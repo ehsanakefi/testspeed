@@ -15,28 +15,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="icons_team1">
                   ${
                     val.linkedin
-                      ? `<a href="${val.linkedin}" class="tooltip" target="_blank"><img  src="./image/linkedin.png" class="icons_team_img" />
+                      ? `<a aria-label="linkedin" href="${val.linkedin}" class="tooltip" target="_blank"><img  src="./image/linkedin.png" class="icons_team_img" />
                       <span class="tooltiptext">${val.name} 's LinkedIn</span>
                       </a>`
                       : ""
                   }
                   ${
                     val.github
-                      ? `<a href="${val.github}" class="tooltip" target="_blank"><img   src="./image/git.png" class="icons_team_img" />
+                      ? `<a aria-label="github" href="${val.github}" class="tooltip" target="_blank"><img   src="./image/git.png" class="icons_team_img" />
                       <span class="tooltiptext">${val.name} 's GitHub</span>
                       </a>`
                       : ""
                   }
                   ${
                     val.google_scholar
-                      ? `<a href="${val.google_scholar}" class="tooltip" target="_blank"><img src="./image/google.png" class="icons_team_img" />
+                      ? `<a aria-label="google-scholar" href="${val.google_scholar}" class="tooltip" target="_blank"><img src="./image/google.png" class="icons_team_img" />
                       <span class="tooltiptext">${val.name} 's Google Scholar</span>
                       </a>`
                       : ""
                   }
                   ${
                     val.homepage
-                      ? `<a href="${val.homepage}" class="tooltip" target="_blank"><img src="./image/website.png" class="icons_team_img" />
+                      ? `<a aria-label="homepage" href="${val.homepage}" class="tooltip" target="_blank"><img src="./image/website.png" class="icons_team_img" />
                       <span class="tooltiptext">${val.name} 's Website</span>
                       </a>`
                       : ""
