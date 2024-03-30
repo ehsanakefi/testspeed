@@ -1,94 +1,60 @@
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("./data/publications.json")
-    .then((response) => response.json())
-    .then((data) => {
-      publications = data.publications;
-      const outputDiv = document.getElementById("publications_box_team");
-      publicationsResult = "";
-      publications.map((val, index) => {
-        const img =
-          val.image == ""
-            ? `<span></span>`
-            : `<img alt="image profile user" src=${val.image} class="image_research" />
-            `;
-
-        publicationsResult += `
+document.addEventListener("DOMContentLoaded",function(){fetch("./data/publications.json").then(a=>a.json()).then(a=>{publications=a.publications;let e=document.getElementById("publications_box_team");publicationsResult="",publications.map((a,e)=>{let s=""==a.image?"<span></span>":`<img src=${a.image} class="image_research" />
+            `;publicationsResult+=`
         <div class="card_research">
         <div class="image_research_box">
-        ${img}
+        ${s}
         </div>
         <div class="left_research_box">
           <span>
-          <a aria-label="title" href="${val.url}" target="_blank">
+          <a href="${a.url}" target="_blank">
             <div class="title_research_box">
               <h4 class="title_research">
-              ${val.title}
+              ${a.title}
               </h4>
             </div>
           </a>
             <div class="contain_text_research_box">
               <p class="contain_text_research">
-              ${val.abstract}
+              ${a.abstract}
               </p>
             </div>
             <p class="jurnal">
-            ${val.journal}, ${val.year}
+            ${a.journal}, ${a.year}
             </p>
             <p class="author">
-            ${val.author}
+            ${a.author}
             </p>
           </span>
           <div class="icons_research_box">
             <div class="icon_text_research">
-              <img alt="icon small BibTeX" src="./image/quote.png" class="icon" />
+              <img src="./image/quote.png" class="icon" />
               <p class="paragraph_icon_research">BibTeX</p>
             </div>
-            ${
-              val.pdf
-                ? `<a aria-label="pdf" href="${val.pdf}" target="_blank">
+            ${a.pdf?`<a href="${a.pdf}" target="_blank">
               <div class="icon_text_research">
-                <img alt="icon small PDF" src="./image/box.png" class="icon" />
+                <img src="./image/box.png" class="icon" />
                 <p class="paragraph_icon_research">PDF</p>
               </div>
-            </a>`
-                : ""
-            }
-            ${
-              val.code
-                ? `<a aria-label="code" href="${val.code}" target="_blank">
+            </a>`:""}
+            ${a.code?`<a href="${a.code}" target="_blank">
                 <div class="icon_text_research">
-                  <img alt="icon small Code" src="./image/code.png" class="icon" />
+                  <img src="./image/code.png" class="icon" />
                   <p class="paragraph_icon_research">Code</p>
                 </div>
-              </a>`
-                : ""
-            }
-            ${
-              val.website
-                ? `<a aria-label="website" href="${val.website}" target="_blank">
+              </a>`:""}
+            ${a.website?`<a href="${a.website}" target="_blank">
                 <div class="icon_text_research">
-                  <img alt="icon small Website" src="./image/world.png" class="icon" />
+                  <img src="./image/world.png" class="icon" />
                   <p class="paragraph_icon_research">Website</p>
                 </div>
-            </a>`
-                : ""
-            }
-            ${
-              val.youtube
-                ? `<a aria-label="youtube" href="${val.youtube}" target="_blank">
+            </a>`:""}
+            ${a.youtube?`<a href="${a.youtube}" target="_blank">
                   <div class="icon_text_research">
-                    <img alt="icon small youtube" src="./image/youtube.png" class="icon" />
+                    <img src="./image/youtube.png" class="icon" />
                     <p class="paragraph_icon_research">Youtube</p>
                   </div>
-              </a>`
-                : ""
-            }
+              </a>`:""}
           </div>
         </div>
       </div> 
-      `;
-      });
-      outputDiv.innerHTML = publicationsResult;
-    })
-    .catch((error) => console.error("Error fetching data:", error));
-});
+      `}),e.innerHTML=publicationsResult}).catch(a=>console.error("Error fetching data:",a))});
