@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="left_research_box">
           <span>
-          <a href="${val.url}" target="_blank">
+          <a aria-label="title" href="${val.url}" target="_blank">
             <div class="title_research_box">
               <h4 class="title_research">
               ${val.title}
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             ${
               val.pdf
-                ? `<a href="${val.pdf}" target="_blank">
+                ? `<a aria-label="pdf" href="${val.pdf}" target="_blank">
               <div class="icon_text_research">
                 <img src="./image/box.png" class="icon" />
                 <p class="paragraph_icon_research">PDF</p>
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             ${
               val.code
-                ? `<a href="${val.code}" target="_blank">
+                ? `<a aria-label="code" href="${val.code}" target="_blank">
                 <div class="icon_text_research">
                   <img src="./image/code.png" class="icon" />
                   <p class="paragraph_icon_research">Code</p>
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             ${
               val.website
-                ? `<a href="${val.website}" target="_blank">
+                ? `<a aria-label="website" href="${val.website}" target="_blank">
                 <div class="icon_text_research">
                   <img src="./image/world.png" class="icon" />
                   <p class="paragraph_icon_research">Website</p>
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             ${
               val.youtube
-                ? `<a href="${val.youtube}" target="_blank">
+                ? `<a aria-label="youtube" href="${val.youtube}" target="_blank">
                   <div class="icon_text_research">
                     <img src="./image/youtube.png" class="icon" />
                     <p class="paragraph_icon_research">Youtube</p>
