@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const img =
           val.image == ""
             ? `<span></span>`
-            : `<img src=${val.image} class="image_research" />
+            : `<img alt="image profile user" src=${val.image} class="image_research" />
             `;
 
         publicationsResult += `
@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
           </span>
           <div class="icons_research_box">
             <div class="icon_text_research">
-              <img src="./image/quote.png" class="icon" />
+              <img alt="icon small BibTeX" src="./image/quote.png" class="icon" />
               <p class="paragraph_icon_research">BibTeX</p>
             </div>
             ${
               val.pdf
                 ? `<a aria-label="pdf" href="${val.pdf}" target="_blank">
               <div class="icon_text_research">
-                <img src="./image/box.png" class="icon" />
+                <img alt="icon small PDF" src="./image/box.png" class="icon" />
                 <p class="paragraph_icon_research">PDF</p>
               </div>
             </a>`
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
               val.code
                 ? `<a aria-label="code" href="${val.code}" target="_blank">
                 <div class="icon_text_research">
-                  <img src="./image/code.png" class="icon" />
+                  <img alt="icon small Code" src="./image/code.png" class="icon" />
                   <p class="paragraph_icon_research">Code</p>
                 </div>
               </a>`
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
               val.website
                 ? `<a aria-label="website" href="${val.website}" target="_blank">
                 <div class="icon_text_research">
-                  <img src="./image/world.png" class="icon" />
+                  <img alt="icon small Website" src="./image/world.png" class="icon" />
                   <p class="paragraph_icon_research">Website</p>
                 </div>
             </a>`
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
               val.youtube
                 ? `<a aria-label="youtube" href="${val.youtube}" target="_blank">
                   <div class="icon_text_research">
-                    <img src="./image/youtube.png" class="icon" />
+                    <img alt="icon small youtube" src="./image/youtube.png" class="icon" />
                     <p class="paragraph_icon_research">Youtube</p>
                   </div>
               </a>`
