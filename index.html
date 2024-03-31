@@ -258,44 +258,5 @@
     </div>
   </body>
 
-  <script>
-    document.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
-      if (window.scrollY > 0) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      var sectionLinks = document.querySelectorAll(".link_header");
-      var sections = document.querySelectorAll("section");
-
-      function setActiveLink() {
-        sections.forEach(function (section) {
-          var bounding = section.getBoundingClientRect();
-          if (bounding.top <= 100 && bounding.bottom >= 100) {
-            var sectionId = section.getAttribute("id");
-            sectionLinks.forEach(function (link) {
-              if (link.getAttribute("href") === "#" + sectionId) {
-                link.classList.add("active");
-              } else {
-                link.classList.remove("active");
-              }
-            });
-          }
-        });
-      }
-      setActiveLink(); // Set active link on page load
-      window.addEventListener("scroll", function () {
-        setActiveLink(); // Update active link while scrolling
-      });
-    });
-    const hamburger = document.querySelector(".hamburger");
-    const headerList = document.querySelector(".header_list");
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      headerList.classList.toggle("active");
-    });
-  </script>
+<script src="./webscript.min.js"></script>
 </html>
